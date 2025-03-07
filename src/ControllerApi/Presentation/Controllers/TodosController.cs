@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ControllerApi.Presentation.Controllers;
 
 [ApiController]
-[Route(Routes.TodosRoute)]
+[Route(Constants.Routes.TodosRoute)]
 public class TodosController : ControllerBase
 {
     private readonly ITodoService _todoService;

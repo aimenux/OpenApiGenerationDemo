@@ -16,7 +16,10 @@ public static class OpenApiExtensions
             return;
         }
 
-        app.MapOpenApi();
+        app
+            .MapOpenApi()
+            .CacheOutput(Constants.Policies.OpenApiCachePolicy);
+        
         app.MapScalarApiReference();
     }
 }

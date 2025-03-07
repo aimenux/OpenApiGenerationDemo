@@ -9,3 +9,7 @@ GET {{BaseUrl}}/api/todos?category=work
 Accept: application/json
 
 ###
+
+GET {{BaseUrl}}/openapi/v1.json
+
+###

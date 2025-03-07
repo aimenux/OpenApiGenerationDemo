@@ -14,6 +14,7 @@ public static class DependencyInjection
         builder.AddHttpLogging();
         builder.AddOpenApi();
         builder.AddRouteOptions();
+        builder.AddOutputCache();
         return services;
     }
 
@@ -44,6 +45,17 @@ public static class DependencyInjection
         {
             options.LowercaseUrls = true;
             options.LowercaseQueryStrings = true;
+        });
+    }
+
+    private static void AddOutputCache(this WebApplicationBuilder builder)
+    {
+        builder.Services.AddOutputCache(options =>
+        {
+            options.AddPolicy(Constants.Policies.OpenApiCachePolicy, policy =>
+            {
+                policy.Expire(TimeSpan.FromMinutes(5)).Cache();
+            });
         });
     }
 }

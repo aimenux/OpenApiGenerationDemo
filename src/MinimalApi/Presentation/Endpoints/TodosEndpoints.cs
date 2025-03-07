@@ -9,7 +9,7 @@ public static class TodosEndpoints
     public static IEndpointRouteBuilder MapTodosEndpoints(this IEndpointRouteBuilder app)
     {
         app
-            .MapGroup(Routes.TodosRoute)
+            .MapGroup(Constants.Routes.TodosRoute)
             .MapGetTodosEndpoint()
             .WithTags("Todos");
 

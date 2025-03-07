@@ -18,6 +18,7 @@ public class Startup
     public void Configure(WebApplication app)
     {
         app.UseHttpLogging();
+        app.UseOutputCache();
         app.UseOpenApi();
         app.UseHttpsRedirection();
         app.UseAuthorization();
