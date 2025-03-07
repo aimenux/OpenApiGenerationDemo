@@ -32,7 +32,7 @@ public static class DependencyInjection
             options.LowercaseQueryStrings = true;
         });
     }
-    
+
     private static void AddOutputCache(this WebApplicationBuilder builder)
     {
         builder.Services.AddOutputCache(options =>

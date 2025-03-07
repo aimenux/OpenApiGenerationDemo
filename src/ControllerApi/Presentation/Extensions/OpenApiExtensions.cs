@@ -19,7 +19,7 @@ public static class OpenApiExtensions
         app
             .MapOpenApi()
             .CacheOutput(Constants.Policies.OpenApiCachePolicy);
-        
+
         app.MapScalarApiReference();
     }
 }

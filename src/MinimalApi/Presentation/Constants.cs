@@ -6,7 +6,7 @@ public static class Constants
     {
         public const string TodosRoute = "api/todos";
     }
-    
+
     public static class Policies
     {
         public const string OpenApiCachePolicy = "OpenApiCachePolicy";
