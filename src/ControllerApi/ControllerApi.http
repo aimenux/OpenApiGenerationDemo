@@ -1,0 +1,11 @@
+@BaseUrl = http://localhost:5083
+
+GET {{BaseUrl}}/api/todos
+Accept: application/json
+
+###
+
+GET {{BaseUrl}}/api/todos?category=work
+Accept: application/json
+
+###

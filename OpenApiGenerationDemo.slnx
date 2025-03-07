@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/files/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="README.md" />
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/ControllerApi/ControllerApi.csproj" />
+    <Project Path="src/MinimalApi/MinimalApi.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/ControllerApi.Tests/ControllerApi.Tests.csproj" />
+    <Project Path="test/MinimalApi.Tests/MinimalApi.Tests.csproj" />
+  </Folder>
+</Solution>
