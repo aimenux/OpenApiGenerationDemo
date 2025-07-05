@@ -8,23 +8,23 @@ public static class TodosEndpoints
 {
     public static IEndpointRouteBuilder MapTodosEndpoints(this IEndpointRouteBuilder app)
     {
-        app
+        var group = app
             .MapGroup(Constants.Routes.TodosRoute)
-            .MapGetTodosEndpoint()
-            .WithTags("Todos");
+            .WithName("TodosEndpoints")
+            .WithTags("Todos")
+            .WithOpenApi();
 
-        return app;
-    }
-
-    private static RouteHandlerBuilder MapGetTodosEndpoint(this IEndpointRouteBuilder app)
-    {
-        return app
+        group
             .MapGet("", async (ITodoService todoService, [FromQuery] string? category, CancellationToken cancellationToken) =>
             {
                 var todos = await todoService.GetTodosAsync(category, cancellationToken);
                 return Results.Ok(todos);
             })
-            .Produces<Todo[]>()
-            .WithName("GetTodos");
+            .WithName("GetTodos")
+            .WithSummary("Retrieves a list of todos")
+            .WithDescription("Gets all todos, optionally filtered by category")
+            .Produces<IEnumerable<Todo>>(contentType: "application/json");
+
+        return app;
     }
 }

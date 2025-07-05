@@ -8,8 +8,10 @@
     "/api/todos": {
       "get": {
         "tags": [
-          "Todos"
+          "todos"
         ],
+        "summary": "Retrieves a list of todos",
+        "description": "Gets all todos, optionally filtered by category",
         "operationId": "GetTodos",
         "parameters": [
           {
@@ -24,23 +26,7 @@
           "200": {
             "description": "OK",
             "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Todo"
-                  }
-                }
-              },
               "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Todo"
-                  }
-                }
-              },
-              "text/json": {
                 "schema": {
                   "type": "array",
                   "items": {
@@ -82,7 +68,7 @@
   },
   "tags": [
     {
-      "name": "Todos"
+      "name": "todos"
     }
   ]
 }

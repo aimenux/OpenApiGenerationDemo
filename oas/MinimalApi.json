@@ -10,6 +10,8 @@
         "tags": [
           "Todos"
         ],
+        "summary": "Retrieves a list of todos",
+        "description": "Gets all todos, optionally filtered by category",
         "operationId": "GetTodos",
         "parameters": [
           {

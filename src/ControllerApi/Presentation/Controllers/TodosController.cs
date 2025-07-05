@@ -15,6 +15,12 @@ public class TodosController : ControllerBase
         _todoService = todoService;
     }
 
+    [Tags("todos")]
+    [EndpointName("GetTodos")]
+    [EndpointSummary("Retrieves a list of todos")]
+    [EndpointDescription("Gets all todos, optionally filtered by category")]
+    [Produces("application/json")]
+    [ProducesResponseType(typeof(IEnumerable<Todo>), StatusCodes.Status200OK)]
     [HttpGet(Name = "GetTodos")]
     public async Task<IEnumerable<Todo>> GetTodosAsync([FromQuery] string? category, CancellationToken cancellationToken)
     {
