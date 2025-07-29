@@ -1,9 +1,9 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
-using ControllerApi.Presentation.Extensions;
 using Microsoft.AspNetCore.HttpLogging;
+using Presentation.Extensions;
 
-namespace ControllerApi.Presentation;
+namespace Presentation;
 
 public static class DependencyInjection
 {

@@ -1,4 +1,4 @@
-﻿namespace MinimalApi.Domain.Models;
+﻿namespace Domain.Models;
 
 public sealed record Todo
 {

@@ -1,7 +1,8 @@
-﻿using ControllerApi.Application.Abstractions;
-using ControllerApi.Infrastructure.Repositories;
+﻿using Application.Abstractions;
+using Infrastructure.Repositories;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace ControllerApi.Infrastructure;
+namespace Infrastructure;
 
 public static class DependencyInjection
 {

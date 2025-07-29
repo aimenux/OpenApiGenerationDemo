@@ -1,6 +1,7 @@
-﻿using MinimalApi.Application.Services;
+﻿using Application.Services;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace MinimalApi.Application;
+namespace Application;
 
 public static class DependencyInjection
 {

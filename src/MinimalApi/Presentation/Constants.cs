@@ -1,4 +1,4 @@
-﻿namespace MinimalApi.Presentation;
+﻿namespace Presentation;
 
 public static class Constants
 {

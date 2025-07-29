@@ -1,6 +1,6 @@
-﻿using MinimalApi.Domain.Models;
+﻿using Domain.Models;
 
-namespace MinimalApi.Application.Abstractions;
+namespace Application.Abstractions;
 
 public interface ITodoRepository
 {

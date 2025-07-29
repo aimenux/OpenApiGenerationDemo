@@ -1,7 +1,7 @@
-﻿using MinimalApi.Application.Abstractions;
-using MinimalApi.Domain.Models;
+﻿using Application.Abstractions;
+using Domain.Models;
 
-namespace MinimalApi.Application.Services;
+namespace Application.Services;
 
 public sealed class TodoService : ITodoService
 {

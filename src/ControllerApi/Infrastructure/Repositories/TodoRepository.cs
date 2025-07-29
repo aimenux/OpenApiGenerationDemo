@@ -1,14 +1,14 @@
-﻿using ControllerApi.Application.Abstractions;
-using ControllerApi.Domain.Models;
+﻿using Application.Abstractions;
+using Domain.Models;
 
-namespace ControllerApi.Infrastructure.Repositories;
+namespace Infrastructure.Repositories;
 
 public sealed class TodoRepository : ITodoRepository
 {
     public Task<IReadOnlyList<Todo>> GetTodosAsync(string? category, CancellationToken cancellationToken)
     {
         var todos = Enumerable.Range(1, RandomNumber())
-            .Select(x => GetTodo(category))
+            .Select(_ => GetTodo(category))
             .ToList();
 
         return Task.FromResult<IReadOnlyList<Todo>>(todos);

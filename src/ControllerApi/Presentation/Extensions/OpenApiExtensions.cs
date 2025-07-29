@@ -1,6 +1,6 @@
 ﻿using Scalar.AspNetCore;
 
-namespace ControllerApi.Presentation.Extensions;
+namespace Presentation.Extensions;
 
 public static class OpenApiExtensions
 {

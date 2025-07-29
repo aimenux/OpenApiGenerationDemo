@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using MinimalApi.Application.Services;
-using MinimalApi.Domain.Models;
+﻿using Application.Services;
+using Domain.Models;
+using Microsoft.AspNetCore.Mvc;
 
-namespace MinimalApi.Presentation.Endpoints;
+namespace Presentation.Endpoints;
 
 public static class TodosEndpoints
 {

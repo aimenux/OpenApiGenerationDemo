@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.HttpLogging;
-using MinimalApi.Presentation.Extensions;
+using Presentation.Extensions;
 
-namespace MinimalApi.Presentation;
+namespace Presentation;
 
 public static class DependencyInjection
 {

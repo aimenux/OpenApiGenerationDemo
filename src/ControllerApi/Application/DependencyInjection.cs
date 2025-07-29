@@ -1,6 +1,7 @@
-﻿using ControllerApi.Application.Services;
+﻿using Application.Services;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace ControllerApi.Application;
+namespace Application;
 
 public static class DependencyInjection
 {

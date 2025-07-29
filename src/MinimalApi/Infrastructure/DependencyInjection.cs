@@ -1,7 +1,8 @@
-﻿using MinimalApi.Application.Abstractions;
-using MinimalApi.Infrastructure.Repositories;
+﻿using Application.Abstractions;
+using Infrastructure.Repositories;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace MinimalApi.Infrastructure;
+namespace Infrastructure;
 
 public static class DependencyInjection
 {

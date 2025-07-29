@@ -1,6 +1,6 @@
-﻿using ControllerApi.Domain.Models;
+﻿using Domain.Models;
 
-namespace ControllerApi.Application.Abstractions;
+namespace Application.Abstractions;
 
 public interface ITodoRepository
 {

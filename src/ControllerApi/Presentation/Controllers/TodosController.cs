@@ -1,8 +1,8 @@
-using ControllerApi.Application.Services;
-using ControllerApi.Domain.Models;
+using Application.Services;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ControllerApi.Presentation.Controllers;
+namespace Presentation.Controllers;
 
 [ApiController]
 [Route(Constants.Routes.TodosRoute)]

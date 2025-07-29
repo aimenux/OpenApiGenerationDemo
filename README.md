@@ -13,4 +13,4 @@ In this repo, i m adding the [support for generating oas at build time and run t
 >
 >
 
-**`Tools`** : net 9.0, oas, scalar
+**`Tools`** : net 9.0, oas

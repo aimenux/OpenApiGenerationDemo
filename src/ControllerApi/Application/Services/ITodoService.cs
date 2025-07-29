@@ -1,6 +1,6 @@
-﻿using ControllerApi.Domain.Models;
+﻿using Domain.Models;
 
-namespace ControllerApi.Application.Services;
+namespace Application.Services;
 
 public interface ITodoService
 {

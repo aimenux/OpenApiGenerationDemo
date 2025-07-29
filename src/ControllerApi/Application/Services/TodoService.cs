@@ -1,7 +1,7 @@
-﻿using ControllerApi.Application.Abstractions;
-using ControllerApi.Domain.Models;
+﻿using Application.Abstractions;
+using Domain.Models;
 
-namespace ControllerApi.Application.Services;
+namespace Application.Services;
 
 public sealed class TodoService : ITodoService
 {

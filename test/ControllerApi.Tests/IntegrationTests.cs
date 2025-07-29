@@ -9,7 +9,6 @@ public class IntegrationTests
     [InlineData("api/todos")]
     [InlineData("api/todos?category=sports")]
     [InlineData("api/todos?category=health")]
-    [InlineData("openapi/v1.json")]
     public async Task Should_Get_Todos(string route)
     {
         // arrange

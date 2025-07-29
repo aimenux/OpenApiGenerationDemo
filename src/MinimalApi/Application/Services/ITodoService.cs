@@ -1,6 +1,6 @@
-﻿using MinimalApi.Domain.Models;
+﻿using Domain.Models;
 
-namespace MinimalApi.Application.Services;
+namespace Application.Services;
 
 public interface ITodoService
 {

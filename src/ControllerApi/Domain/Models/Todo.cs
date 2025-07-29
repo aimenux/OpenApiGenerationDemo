@@ -1,4 +1,4 @@
-﻿namespace ControllerApi.Domain.Models;
+﻿namespace Domain.Models;
 
 public sealed record Todo
 {

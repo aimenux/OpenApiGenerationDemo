@@ -1,10 +1,8 @@
-﻿using MinimalApi.Application;
-using MinimalApi.Infrastructure;
-using MinimalApi.Presentation;
-using MinimalApi.Presentation.Endpoints;
-using MinimalApi.Presentation.Extensions;
+﻿using Application;
+using Infrastructure;
+using Presentation.Extensions;
 
-namespace MinimalApi;
+namespace Presentation;
 
 public class Startup
 {
@@ -22,6 +20,7 @@ public class Startup
         app.UseOutputCache();
         app.UseOpenApi();
         app.UseHttpsRedirection();
-        app.MapTodosEndpoints();
+        app.UseAuthorization();
+        app.MapControllers();
     }
 }

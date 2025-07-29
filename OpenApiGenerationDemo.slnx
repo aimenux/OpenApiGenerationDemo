@@ -6,10 +6,20 @@
     <File Path="README.md" />
     <File Path=".gitignore" />
     <File Path=".github\workflows\ci.yml" />
+    <File Path="global.json" />
   </Folder>
-  <Folder Name="/src/">
-    <Project Path="src/ControllerApi/ControllerApi.csproj" />
-    <Project Path="src/MinimalApi/MinimalApi.csproj" />
+  <Folder Name="/src/" />
+  <Folder Name="/src/ControllerApi/">
+    <Project Path="src/ControllerApi/Application/Application.csproj" />
+    <Project Path="src/ControllerApi/Domain/Domain.csproj" />
+    <Project Path="src/ControllerApi/Infrastructure/Infrastructure.csproj" />
+    <Project Path="src/ControllerApi/Presentation/Presentation.csproj" />
+  </Folder>
+  <Folder Name="/src/MinimalApi/">
+    <Project Path="src/MinimalApi/Application/Application.csproj" />
+    <Project Path="src/MinimalApi/Domain/Domain.csproj" />
+    <Project Path="src/MinimalApi/Infrastructure/Infrastructure.csproj" />
+    <Project Path="src/MinimalApi/Presentation/Presentation.csproj" />
   </Folder>
   <Folder Name="/test/">
     <Project Path="test/ControllerApi.Tests/ControllerApi.Tests.csproj" />

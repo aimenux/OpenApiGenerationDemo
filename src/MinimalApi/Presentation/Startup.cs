@@ -1,9 +1,9 @@
-﻿using ControllerApi.Application;
-using ControllerApi.Infrastructure;
-using ControllerApi.Presentation;
-using ControllerApi.Presentation.Extensions;
+﻿using Application;
+using Infrastructure;
+using Presentation.Endpoints;
+using Presentation.Extensions;
 
-namespace ControllerApi;
+namespace Presentation;
 
 public class Startup
 {
@@ -21,7 +21,6 @@ public class Startup
         app.UseOutputCache();
         app.UseOpenApi();
         app.UseHttpsRedirection();
-        app.UseAuthorization();
-        app.MapControllers();
+        app.MapTodosEndpoints();
     }
 }
