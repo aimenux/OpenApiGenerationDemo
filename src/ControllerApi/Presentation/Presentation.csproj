@@ -4,6 +4,7 @@
         <IsReleaseMode>$(Configuration.Equals('Release'))</IsReleaseMode>
         <OpenApiGenerateDocuments>$(IsReleaseMode)</OpenApiGenerateDocuments>
         <OpenApiGenerateDocumentsOnBuild>$(IsReleaseMode)</OpenApiGenerateDocumentsOnBuild>
+        <OpenApiGenerateDocumentsOptions>--file-name oas</OpenApiGenerateDocumentsOptions>
         <OpenApiDocumentsDirectory>$(SolutionDir)/oas/controller-api</OpenApiDocumentsDirectory>
     </PropertyGroup>
     
@@ -23,4 +24,12 @@
         <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     </ItemGroup>
 
+    <Target Name="RenameOpenApiDocuments" AfterTargets="GenerateOpenApiDocuments">
+        <ItemGroup>
+            <GeneratedOpenApiFiles Include="$(OpenApiDocumentsDirectory)\*.json" />
+        </ItemGroup>
+        <Exec Command="for %%f in (@(GeneratedOpenApiFiles->'%(FullPath)')) do (if %%~nxf==oas.json ren %%f oas-v1.json)" />
+        <Exec Command="for %%f in (@(GeneratedOpenApiFiles->'%(FullPath)')) do (if %%~nxf==oas_v2.json ren %%f oas-v2.json)" />
+    </Target>
+    
 </Project>
