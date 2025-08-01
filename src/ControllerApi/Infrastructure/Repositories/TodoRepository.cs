@@ -6,14 +6,14 @@ namespace Infrastructure.Repositories;
 public sealed class TodoRepository : ITodoRepository
 {
     private static readonly TimeSpan Delay = TimeSpan.FromMilliseconds(50);
-    
+
     public async Task<Todo> GetTodoAsync(string id, CancellationToken cancellationToken)
     {
         await Task.Delay(Delay, cancellationToken);
         var todo = GetTodo(id, $"category-{RandomNumber()}");
         return todo;
     }
-    
+
     public async Task<IEnumerable<Todo>> GetTodosAsync(string? category, CancellationToken cancellationToken)
     {
         await Task.Delay(Delay, cancellationToken);

@@ -30,7 +30,7 @@ public class TodosController : ControllerBase
         var todos = await _todoService.GetTodosAsync(category, cancellationToken);
         return todos;
     }
-    
+
     [Tags("Todos")]
     [EndpointName("GetTodo")]
     [EndpointSummary("Retrieves a todo")]

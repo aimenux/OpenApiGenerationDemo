@@ -15,7 +15,7 @@ public static class TodosEndpoints
             .HasDeprecatedApiVersion(new ApiVersion(1.0))
             .ReportApiVersions()
             .Build();
-        
+
         var group = app
             .MapGroup("api/v{version:apiVersion}/todos")
             .WithApiVersionSet(versions)

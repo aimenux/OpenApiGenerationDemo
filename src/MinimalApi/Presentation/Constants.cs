@@ -10,7 +10,7 @@ public static class Constants
             "v2"
         ];
     }
-    
+
     public static class Policies
     {
         public const string OpenApiCachePolicy = "OpenApiCachePolicy";
