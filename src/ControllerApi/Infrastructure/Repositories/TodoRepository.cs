@@ -5,19 +5,29 @@ namespace Infrastructure.Repositories;
 
 public sealed class TodoRepository : ITodoRepository
 {
-    public Task<IReadOnlyList<Todo>> GetTodosAsync(string? category, CancellationToken cancellationToken)
+    private static readonly TimeSpan Delay = TimeSpan.FromMilliseconds(50);
+    
+    public async Task<Todo> GetTodoAsync(string id, CancellationToken cancellationToken)
     {
+        await Task.Delay(Delay, cancellationToken);
+        var todo = GetTodo(id, $"category-{RandomNumber()}");
+        return todo;
+    }
+    
+    public async Task<IEnumerable<Todo>> GetTodosAsync(string? category, CancellationToken cancellationToken)
+    {
+        await Task.Delay(Delay, cancellationToken);
         var todos = Enumerable.Range(1, RandomNumber())
-            .Select(_ => GetTodo(category))
+            .Select(x => GetTodo($"{x}", category))
             .ToList();
-
-        return Task.FromResult<IReadOnlyList<Todo>>(todos);
+        return todos;
     }
 
-    private static Todo GetTodo(string? category)
+    private static Todo GetTodo(string id, string? category)
     {
         return new Todo
         {
+            Id = id,
             Title = Guid.NewGuid().ToString("N"),
             Category = category,
             IsCompleted = RandomNumber() % 2 == 0,

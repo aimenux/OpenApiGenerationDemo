@@ -6,7 +6,10 @@ public static class OpenApiExtensions
 {
     public static void AddOpenApi(this WebApplicationBuilder builder)
     {
-        builder.Services.AddOpenApi();
+        foreach (var version in Constants.Api.Versions)
+        {
+            builder.Services.AddOpenApi(version);
+        }
     }
 
     public static void UseOpenApi(this WebApplication app)

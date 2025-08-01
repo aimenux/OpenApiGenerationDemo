@@ -12,6 +12,7 @@ public static class DependencyInjection
         var services = builder.Services;
         builder.AddControllers();
         builder.AddHttpLogging();
+        builder.AddVersioning();
         builder.AddOpenApi();
         builder.AddRouteOptions();
         builder.AddOutputCache();

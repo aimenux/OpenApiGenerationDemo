@@ -2,11 +2,15 @@
 
 public static class Constants
 {
-    public static class Routes
+    public static class Api
     {
-        public const string TodosRoute = "api/todos";
+        public static readonly string[] Versions =
+        [
+            "v1",
+            "v2"
+        ];
     }
-
+    
     public static class Policies
     {
         public const string OpenApiCachePolicy = "OpenApiCachePolicy";

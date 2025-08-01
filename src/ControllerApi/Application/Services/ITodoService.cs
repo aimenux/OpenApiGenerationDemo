@@ -4,5 +4,7 @@ namespace Application.Services;
 
 public interface ITodoService
 {
-    Task<IReadOnlyList<Todo>> GetTodosAsync(string? category, CancellationToken cancellationToken);
+    Task<Todo> GetTodoAsync(string id, CancellationToken cancellationToken);
+    
+    Task<IEnumerable<Todo>> GetTodosAsync(string? category, CancellationToken cancellationToken);
 }
