@@ -13,5 +13,6 @@ In this repo, i m adding the [support for generating oas at build time and run t
 >
 > 🚨 **Note**: The oas generation is done using the [Microsoft.Extensions.ApiDescription.Server](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/openapi/aspnetcore-openapi?view=aspnetcore-9.0&tabs=visual-studio%2Cvisual-studio-code#generate-openapi-documents-at-build-time).
 > 
+> Run `dotnet build -c Release` to generate the oas directory and files.
 
-**`Tools`** : net 9.0, oas
+**`Tools`** : net 10.0, oas
